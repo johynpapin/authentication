@@ -1,20 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Authentication methods</title>
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Authentication methods</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-  </head>
-  <body>
-    <h1>Hello, universe!</h1>
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
 
-    <!-- jQuery first, then Tether, then Bootstrap JS. -->
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-  </body>
+		<!-- fullPage CSS -->
+		<link rel="stylesheet" type="text/css" href="styles/jquery.fullpage.min.css">
+
+		<!-- main CSS -->
+		<link rel="stylesheet" type="text/css" href="styles/main.css">
+
+		<!-- Cookie Consent CSS -->
+		<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+
+		<!-- reCAPTCHA -->
+		<script src='https://www.google.com/recaptcha/api.js'></script>
+	</head>
+	<body>
+		<ul id="menu">
+			<li data-menuanchor="intro" class="active"><a href="#intro">Introduction</a></li>
+			<li data-menuanchor="humans"><a href="#humans">Between humans</a></li>
+			<li data-menuanchor="humancomputers"><a href="#humancomputers">Human / computers</a></li>
+			<li data-menuanchor="computers"><a href="#computers">Between computers</a></li>
+			<li data-menuanchor="theend"><a href="#theend">The end</a></li>
+		</ul>
+		<main id="fullpage">
+			<section class="section" id="sintro" data-anchor="intro">
+				<article class="intro">
+					<h1>Authentication</h1>
+					<p>To navigate, you can use the mouse, the keyboard, or your touchscreen.</p>
+				</article>
+			</section>
+			<section class="section" id="s1" data-anchor="humans">
+				<article class="slide">
+					<h1>Between humans</h1>
+				</article>
+				<article class="slide">
+					<h1>Visual authentication</h1>
+					<p>When a human meet another human they have to authenticate one another. To do that they have to use their memories in order to identify other people.</p>
+					<p>Many things can characterize us:</p>
+					<p>- Our visual appearence (the color of our skin, eye, hair...). We can trust in this information because even science allow us to change it, this remains unusual.</p>
+					<p>We can add that there are also lineaments that can change with time as the voice, size, weight...</p>
+					<p>- Our psychological identity, we all have specific behaviours which are known by everyone arround us. </p>
+				</article>
+				<article class="slide">
+					<h1>Civilian authentication</h1>
+					<p>In order to operate efficiency, the administration need to identify formally each citizens. To do that it had to implements standarts criterions of identity for everyone.</p>
+					<p>The government deliver identity cards in order to give to each people a way to authenticate them in front of the administration.</p>
+					<p>This is important firstly to improve security in some places or during events but in a other hand it allows to secure private data.</p>
+				</article>
+				<article class="slide">
+					<h1>TES</h1>
+					<p>The problem with this identification / authentication system is that a government centralizes all the citizens data. At this moment, the french government seeks to centralize a huge amount of data about citizens.</p>
+					<p>We can see some advantages from the point of view of the security specialy in this period.</p>
+					<p>However, it needs a efficiency control on the use of this information and we can't be sure of which informations are gathered and for what they are used.</p>
+				</article>
+			</section>
+			<section class="section" id="s2" data-anchor="humancomputers">
+				<article class="slide">
+					<h1>Human / computers</h1>
+				</article>
+				<article class="slide">
+					<h1>Introduction</h1>
+					<p>Computer security hinges on two very simple goals:</p>
+					<p>Keeping unauthorized persons from gaining access to resources</p>
+					<p>Ensuring that authorized persons can access the resources they need</p>
+					<p>This can be done by entering a password, inserting a smart card and entering the associated PIN, providing a fingerprint, voice pattern sample, or retinal scan, or using some other means to prove to the system that you are who you claim to be.</p>
+				</article>
+				<article class="slide">
+					<h1>Password authentication</h1>
+					<p>Most of us are familiar with password authentication. To log onto a computer or network, you enter a user account name and the password assigned to that account. This password is checked against a database that contains all authorized users and their passwords.</p>
+				</article>
+				<article class="slide">
+					<h1>Smart card authentication</h1>
+					<p>Smart cards are credit card-sized devices that hold a small computer chip, which is used to store public and private keys and other personal information used to identify a person and authenticate him or her to the system. Logging onto the network with a smart card requires that you physically insert the card into (or slide it through) a reader and then enter a Personal Identification Number (PIN) in much the same way that you use an ATM card to access an automatic teller machine.</p>
+					<p>Smart cards use cryptography-based authentication and provide stronger security than a password because in order to gain access, the user must be in physical possession of the card and must know the PIN.</p>
+				</article>
+				<article class="slide">
+					<h1>Biometric authentication</h1>
+					<p>An even more secure type of authentication than smart cards, biometric authentication involves the use of biological statistics that show that the probability of two people having identical biological characteristics such as fingerprints is infinitesimally small; thus, these biological traits can be used to positively identify a person.</p>
+					<p>In addition to fingerprints, voice, retinal, and iris patterns are virtually unique to each individual and can be used for authentication purposes. This method of proving one’s identity is very difficult to falsify, although it requires expensive equipment to input the fingerprint, voice sample, or eye scan. Another advantage over smart cards is that the user does not have to remember to carry a device; his or her biological credentials are never left at home.</p>
+				</article>
+			</section>
+			<section class="section" id="s3" data-anchor="computers">
+				<article class="slide">
+					<h1>Between computers</h1>
+				</article>
+				<article class="slide">
+					<h1>Introduction</h1>
+					<p>Sometimes, computers have to authenticate with other computers. This phenomenon is more and more common with the advance of connected objects, which communicate with each other.</p>
+					<p>So today it is a new challenge: how to ensure that certain data belongs to a particular computer?</p>
+				</article>
+				<article class="slide">
+					<h1>OAuth</h1>
+					<p>OAuth is an open standard for access delegation, commonly used as a way for Internet users to grant websites or applications access to their information on other websites but without giving them the passwords. This mechanism is used by companies such as Google, Facebook, Microsoft and Twitter to permit the users to share information about their accounts with third party applications or websites.</p>
+					<p>Even if the process begins with the user's action, there comes a time when two servers will authenticate themselves with a token (sort of long password) between them (eg Twitter servers and those of a website that allows to connect with Twitter).</p>
+			</section>
+			<section class="section" id="stheend" data-anchor="theend">
+				<article class="intro">
+					<h1>The end</h1>
+					<p>Problems with authentication will still exist. You only have to look at the world of connected objects.</p>
+					<p>The world of cryptomonism also raises new questions ...</p>
+					<small>PS: Have you tried the konami code?</small>
+				</article>
+			</section>
+		</main>
+
+		<!-- Modals -->
+
+		<div class="modal fade" id="s1Modal">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Restricted area</h5>
+					</div>
+					<div class="modal-body">
+						<p>In order to continue reading, you must authenticate yourself.</p>
+						<div class="g-recaptcha" data-sitekey="6LetiSMUAAAAAPTsLBHtKIfxVIc7dkFkTYHOfNLX" data-callback="imNotARobot"></div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" disabled class="btn btn-primary" id="s1ModalBtn">Continue</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="s2Modal">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Restricted area</h5>
+					</div>
+					<div class="modal-body">
+						<p>In order to continue reading, you must authenticate yourself.</p>
+						<p>The login is "alan", and the password is "turing42".</p>
+						<div class="form-group row">
+							<label for="example-text-input" class="col-2 col-form-label">Login</label>
+							<div class="col-10">
+								<input class="form-control" type="text" placeholder="Login" id="login">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="example-text-input" class="col-2 col-form-label">Password</label>
+							<div class="col-10">
+								<input class="form-control" type="password" placeholder="Password" id="password">
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" disabled class="btn btn-primary" id="s2ModalBtn">Continue</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="s3Modal">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Restricted area</h5>
+					</div>
+					<div class="modal-body">
+						<p>In order to continue reading, you must authenticate to the previous two parts of the presentation.</p>
+						<p>Here, we use cookies to verify that you are authenticated.</p>
+						<p>First part: <span id="first-part">no</span>, second part: <span id="second-part">no</span>.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary" id="s3ModalBtnCancel">Cancel</button>
+						<button type="button" disabled class="btn btn-primary" id="s3ModalBtn">Continue</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- jQuery first, then Tether, then Bootstrap JS. -->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+		<!-- fullPage JS -->
+		<script src="scripts/jquery.fullpage.min.js"></script>
+
+		<!-- particles JS -->
+		<script src="scripts/particles.min.js"></script>
+
+		<!-- Cookie Consent JS -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+
+		<!-- konami JS -->
+		<script src="scripts/konami.js"></script>
+
+		<!-- main JS -->
+		<script src="scripts/main.js"></script>
+	</body>
 </html>
