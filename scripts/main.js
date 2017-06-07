@@ -1,22 +1,24 @@
+"use strict";
+
 $(document).ready(function () {
 	window.cookieconsent.initialise({
 		palette: {
-	    popup: {
-	      background: "#252e39"
-    	},
-    	button: {
-      	background: "transparent",
-      	text: "#14a7d0",
-      	border: "#14a7d0"
-    	}
-	  }
+			popup: {
+				background: "#252e39"
+			},
+			button: {
+				background: "transparent",
+				text: "#14a7d0",
+				border: "#14a7d0"
+			}
+		}
 	});
 
 	particlesJS.load('sintro', 'assets/particles.json', function () {
 		console.log('particles.js config loaded');
 	});
 
-	new Konami('https://www.youtube.com/watch?v=fJ9rUzIMcZQ');
+	new Konami('https://youtu.be/HgzGwKwLmgM?t=30s');
 
 	setCookie('first-part', '0', 1);
 	setCookie('second-part', '0', 1);
@@ -48,7 +50,7 @@ $(document).ready(function () {
 		slidesNavigation: true,
 		scrollingSpeed: 350,
 		loopHorizontal: false,
-		onSlideLeave: function (anchorLink, index, slideIndex, direction, nextSlideIndex) {
+		onSlideLeave: function onSlideLeave(anchorLink, index, slideIndex, direction, nextSlideIndex) {
 			try {
 				if (slideIndex === 0 && direction === 'right') {
 					if (index === 2 && !s1Modal) {
@@ -93,11 +95,10 @@ $(document).ready(function () {
 	});
 
 	$('#s3ModalBtn').on('click', function () {
-		s3Modal = true
+		s3Modal = true;
 		$('#s3Modal').modal('hide');
 		$.fn.fullpage.moveSlideRight();
 	});
-
 
 	$('#s3ModalBtnCancel').on('click', function () {
 		$('#s3Modal').modal('hide');
@@ -132,23 +133,46 @@ function checkLoginForm() {
 
 function setCookie(cname, cvalue, exdays) {
 	var d = new Date();
-	d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+	d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
 	var expires = "expires=" + d.toUTCString();
 	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
 function getCookie(cname) {
-	var name = cname + "=";
-  var decodedCookie = decodeURIComponent(document.cookie);
-  var ca = decodedCookie.split(';');
-  for (var i = 0; i < ca.length; i++) {
-    var c = ca[i];
-  	while (c.charAt(0) === ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) === 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
+	var name = cname + '=';
+	var decodedCookie = decodeURIComponent(document.cookie);
+	var ca = decodedCookie.split(';');
+	var _iteratorNormalCompletion = true;
+	var _didIteratorError = false;
+	var _iteratorError = undefined;
+
+	try {
+		for (var _iterator = ca[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+			var c = _step.value;
+			// foreach cookies
+			while (c.charAt(0) === ' ') {
+				// clean the cookie
+				c = c.substring(1);
+			}
+			if (c.indexOf(name) === 0) {
+				// alan turing 42
+				return c.substring(name.length, c.length);
+			}
+		}
+	} catch (err) {
+		_didIteratorError = true;
+		_iteratorError = err;
+	} finally {
+		try {
+			if (!_iteratorNormalCompletion && _iterator.return) {
+				_iterator.return();
+			}
+		} finally {
+			if (_didIteratorError) {
+				throw _iteratorError;
+			}
+		}
+	}
+
+	return ''; // if not found
 }
